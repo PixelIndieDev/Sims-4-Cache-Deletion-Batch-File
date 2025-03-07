@@ -23,6 +23,7 @@ EXIT /B
 :main
 if exist "%folderpath%\Electronic Arts\The Sims 4" (
 	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\localthumbcache.package"
+	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\localsimtexturecache.package"
 	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\cachestr\*.*"
 	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\cache\*.*"
 	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\onlinethumbnailcache\*.*"
