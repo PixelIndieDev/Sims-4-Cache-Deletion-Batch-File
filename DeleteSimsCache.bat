@@ -3,7 +3,7 @@
 :: Change folderpath in case the script can't find the folder
 set folderpath="%UserProfile%\Documents"
 :: Change showMessages to true if you want to see the message pop-up
-set showMessages=true
+set showMessages=false
 :: Variable used to check if at least one file got deleted. Do NOT manually change value
 set somethingDeleted=false
 
@@ -23,6 +23,7 @@ EXIT /B
 :main
 if exist "%folderpath%\Electronic Arts\The Sims 4" (
 	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\localthumbcache.package"
+	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\avatarcache.package"
 	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\localsimtexturecache.package"
 	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\cachestr\*.*"
 	call :deleteFiles "%folderpath%\Electronic Arts\The Sims 4\cache\*.*"
